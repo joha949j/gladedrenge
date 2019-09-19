@@ -1,8 +1,18 @@
+/******** 1. GENERELLE INDSTILLINGER ********/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
-    /*    background-color: #ff6555;*/
 }
+
 
 
 /**********BURGERMENU***********/
@@ -116,19 +126,19 @@ a:hover {
     transform: none;
 }
 
-
 /******grid*********/
 
 #grid {
     display: grid;
+
     grid-template-areas:
         "nav header ads"
         "nav article ads"
         "nav article ads"
         "nav article ads"
         "nav article ads";
-    grid-template-rows: 80px 1fr;
-    grid-template-columns: 2% 1fr 5%;
+    grid-template-rows: 80px 1fr 1fr;
+    grid-template-columns: 0% 1fr 15%;
     grid-row-gap: 10px;
     height: 100vh;
 }
@@ -154,8 +164,43 @@ a:hover {
     grid-area: ads;
 }
 
+/*About.html*/
+/*Selve rulleteksten deco*/
+.scrollingtext a {
+    font-family: sans-serif;
+    font-size: 3rem;
+    display: flex;
+    color: #0000ff;
+    z-index: -1;
+}
 
+/*Hover CV tekst*/
+.scrollingtext a:hover {
+    color: black;
+}
 
+.omMain {
+    position: relative;
+}
+
+.om {
+    position: absolute;
+    top: 15%;
+    right: 30%;
+}
+
+.om img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.om p {
+
+    font-size: 10rem;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
 
 /*******styling**********/
 
@@ -177,15 +222,18 @@ a:hover {
 
 #toTop {
     position: relative;
+    margin: 0;
 }
 
 
 .navn {
     transform: rotate(-90deg);
     height: 20px;
-    position: absolute;
+    position: fixed;
     right: 0%;
     top: 50%;
+    padding-bottom: 0;
+    margin-bottom: 0;
 
 
 }
@@ -203,6 +251,15 @@ a:hover {
     margin: 0 10px 0 10px;
 }
 
+iframe {
+    width: 100%;
+    max-width: 525px;
+    overflow: hidden;
+    background: transparent;
+    margin-left: 10px;
+}
+
+
 
 @media screen and (min-width: 900px) {
     #mainNav {
@@ -215,7 +272,7 @@ a:hover {
 
     #grid {
         grid-template-areas:
-            "nav header ads"
+            "nav header header"
             "nav article ads"
             "nav article ads"
             "nav article ads"

@@ -10,7 +10,14 @@
 
 <body>
     <main id="grid">
-        <header id="pageHeader"></header>
+        <header id="pageHeader">
+            <div class="scrollingtext">
+                <h1><a href="http://johanjansen.dk/CV.pdf" target="_blank">
+                        <marquee behavior="scroll" direction="right" scrollamount="30">CV CV CV CV CV CV CV CV CV CV CV CV CV CV CV</marquee>
+                    </a></h1>
+
+            </div>
+        </header>
         <nav id="mainNav">
             <div id="menuToggle">
                 <input type="checkbox" />
@@ -18,7 +25,7 @@
                 <span></span>
                 <span></span>
                 <ul id="menu">
-                    <a href="#">
+                    <a href="about.html">
                         <li>about</li>
                     </a>
                     <a href="#">
@@ -35,7 +42,7 @@
         </nav>
         <nav id="subNav">
             <ul>
-                <a href="#">
+                <a href="about.html">
                     <li>About</li>
                 </a>
                 <a href="#">
@@ -49,7 +56,11 @@
                 </a></ul>
         </nav>
 
-        <article id="mainArticle">
+        <article id="mainArticle" class="omMain">
+            <img src="IMG_0743.jpeg" alt="mig">
+            <div class="om">
+                <p>Hi</p>
+            </div>
 
         </article>
         <div id="toTop">
@@ -63,4 +74,6 @@
     </main>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>
