@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 100%;
-}
+html {}
 
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
+
 }
 
 
@@ -128,6 +128,14 @@ a:hover {
 
 /******grid*********/
 
+#liste {
+    display: grid;
+    grid-gap: 5px;
+    grid-row-gap: 0px;
+    grid-template-columns: 1fr;
+    padding: 0 auto;
+}
+
 #grid {
     display: grid;
 
@@ -138,7 +146,7 @@ a:hover {
         "nav article ads"
         "nav article ads";
     grid-template-rows: 80px 1fr 1fr;
-    grid-template-columns: 0% 1fr 15%;
+    grid-template-columns: 5% 1fr 5%;
     grid-row-gap: 10px;
     height: 100vh;
 }
@@ -151,7 +159,9 @@ a:hover {
     grid-area: footer;
 }
 
-#mainArticle {
+#mainArticle,
+#template,
+#liste {
     grid-area: article;
 }
 
@@ -228,7 +238,7 @@ a:hover {
 
 .navn {
     transform: rotate(-90deg);
-    height: 20px;
+    height: 5px;
     position: fixed;
     right: 0%;
     top: 50%;
@@ -238,11 +248,12 @@ a:hover {
 
 }
 
-.navn h1 {
+.navn h2 {
     cursor: pointer;
     text-decoration: none;
     color: red;
     margin: 0;
+    font-size: 10px;
 }
 
 
@@ -253,12 +264,38 @@ a:hover {
 
 iframe {
     width: 100%;
-    max-width: 525px;
+    height: 100%;
     overflow: hidden;
     background: transparent;
-    margin-left: 10px;
+    margin-left: 0;
 }
 
+.pageHeader {}
+
+.btn_con {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn_con1 {
+    margin-top: 70px;
+    margin-left: 30px;
+}
+
+.btn_con2 {
+    margin-top: 70px;
+    margin-left: 30px;
+}
+
+
+/***MOOD***/
+
+#liste img {
+    width: 100%;
+}
 
 
 @media screen and (min-width: 900px) {
@@ -274,13 +311,26 @@ iframe {
         grid-template-areas:
             "nav header header"
             "nav article ads"
-            "nav article ads"
-            "nav article ads"
             "nav article ads";
+
         grid-template-rows: 80px 1fr 1fr;
         grid-template-columns: 13% 1fr 5%;
         grid-row-gap: 10px;
         grid-column-gap: 10px;
         height: 100vh;
     }
+
+
+    .btn_con2 {
+        margin-left: 0;
+    }
+
+    .navn h1 {
+        font-size: 1rem;
+    }
+
+    #liste {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
 }
